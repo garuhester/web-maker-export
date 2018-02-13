@@ -1,0 +1,877 @@
+[
+  {
+    "css": "#all{\n  position:absolute;\n  top:50%;\n  left:50%;\n  transform:translate(-50%,-50%);\n  background:#ddd;\n  width:300px;\n  height:500px;\n  overflow:hidden;\n}\n#drawer{\n  position:absolute;\n  width:200px;\n  height:500px;\n  background:skyblue;\n  top:0;\n  left:-200px;\n  transition:all 0.3s;\n}\n#main{\n  position:absolute;\n  width:300px;\n  height:500px;\n  background:tomato;\n  top:0;\n  left:0;\n  transition:all 0.3s;\n}\n#nav{\n  height:50px;\n  background:yellow;\n  position:relative;\n}\n#open{\n  background:tomato;\n  width:35px;\n  height:35px;\n  position:absolute;\n  top:50%;\n  left:10px;\n  transform:translate(0,-50%);\n  cursor:pointer;\n}\n#mask{\n  display:none;\n  position:absolute;\n  width:300px;\n  height:500px;\n  top:0;\n  background:rgba(0,0,0,.5);\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div id=\"all\">\n  <div id=\"drawer\"></div>\n  <div id=\"main\">\n    <div id=\"nav\">\n      <div id=\"open\"></div>\n    </div>\n    <div id=\"content\"></div>\n    <div id=\"mask\"></div>\n  </div>\n</div>",
+    "htmlMode": "html",
+    "id": "item-1FoxaZYD3k",
+    "js": "var drawer = document.getElementById(\"drawer\");\nvar main = document.getElementById(\"main\");\nvar mask = document.getElementById(\"mask\");\ndocument.getElementById(\"open\").onclick = function(){\n  drawer.style.left = 0; \n  main.style.left = 200 + \"px\"; \n  mask.style.display = \"block\";\n}\nmask.onclick = function(){\n  drawer.style.left = -200 + \"px\"; \n  main.style.left = 0; \n  mask.style.display = \"none\";\n}",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      45.5344,
+      54.4656
+    ],
+    "sizes": [
+      "calc(33.3% - 3px)",
+      "calc(49.9608% - 6px)",
+      "calc(16.7712% - 3px)"
+    ],
+    "title": "drawer",
+    "updatedOn": 1515598119632
+  },
+  {
+    "css": "body{\n  margin:0;\n  padding:0;\n}\n.main{\n  display:grid;\n  grid-template:repeat(auto-fit,50px) / repeat(auto-fit,minmax(200px,1fr));\n  grid-gap:5px;\n}\n.main div{\n  text-align:center;\n  line-height:50px;\n  font-size:20px;\n}\n.main div:nth-child(even){\n  background:tomato;\n}\n.main div:nth-child(odd){\n  background:skyblue;\n}\n\n.img{\n  object-fit:cover;\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div class=\"main\">\n  <div>1</div>\n  <div>2</div>\n  <div>3</div>\n  <div>4</div>\n  <div>5</div>\n  <div>6</div>  \n</div>",
+    "htmlMode": "html",
+    "id": "item-1KyVFY8Ftl",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      47.0717,
+      52.9248
+    ],
+    "sizes": [
+      "calc(33.33% - 3px)",
+      "calc(61.0477% - 6px)",
+      "calc(5.64263% - 3px)"
+    ],
+    "title": "auto grid",
+    "updatedOn": 1513735518418
+  },
+  {
+    "css": "body{\n  margin:0;\n  padding:0;\n  width:100%;\n  min-height:100vh;\n  display:table;\n  text-align:center;\n}\n.header,.main,.footer{\n  display:table-row;\n}\n.header{\n  height:50px;\n  background:tomato;\n}\n.main{\n  width:100%;\n  display:table;\n  height:calc(100vh - 100px);\n}\n.main .left{\n  width:300px;\n  display:table-cell;\n  background:#fcea96;\n}\n.main .right{\n  display:table-cell;\n  background:skyblue;\n}\n.footer{\n  height:50px;\n  background:#9d70ff;\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div class=\"header\">header</div>\n<div class=\"main\">\n  <div class=\"left\">left</div>\n  <div class=\"right\">right</div>\n</div>\n<div class=\"footer\">footer</div>",
+    "htmlMode": "html",
+    "id": "item-4NBZavRfJy",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      46.7057,
+      53.2931
+    ],
+    "sizes": [
+      "calc(33.33% - 3px)",
+      "calc(61.0477% - 6px)",
+      "calc(5.64263% - 3px)"
+    ],
+    "title": "table-2",
+    "updatedOn": 1513231024406
+  },
+  {
+    "css": "",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "",
+    "htmlMode": "html",
+    "id": "item-8rs0sYDUjP",
+    "js": "class Load{\n\tconstructor(){\n\t\tconsole.log(1)\n\t}\n  \n  init(){\n    console.log(2)\n  }\n  \n}\nvar l = new Load();\nconsole.log()",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      63.2504,
+      36.7485
+    ],
+    "sizes": [
+      "calc(5.64263% - 3px)",
+      "calc(6.11285% - 6px)",
+      "calc(88.2274% - 3px)"
+    ],
+    "title": "web-index",
+    "updatedOn": 1518061383005
+  },
+  {
+    "css": "body{\n  margin:0;\n  padding:0;\n}\n.row{\n  width:100%;\n  height:200px;\n  /* background:#ddd; */\n}\n.col{\n  width:20%;\n  height:200px;\n  /* background:tomato; */\n  float:left;\n  box-sizing:border-box;\n  padding:10px;\n  transition:all 0.3s;\n}\n.content{\n  width:100%;\n  height:100%;\n  background:skyblue;\n}\n@media screen and (max-width:600px){\n  .col{\n    width:33.3%;\n  }\n}\n@media screen and (max-width:400px){\n  .col{\n    width:50%;\n  }\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div class=\"row\">\n  <div class=\"col\"><div class=\"content\"></div></div>\n  <div class=\"col\"><div class=\"content\"></div></div>\n  <div class=\"col\"><div class=\"content\"></div></div>\n  <div class=\"col\"><div class=\"content\"></div></div>\n  <div class=\"col\"><div class=\"content\"></div></div>\n</div>",
+    "htmlMode": "html",
+    "id": "item-AJBtPU2GyG",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      43.7775,
+      56.2203
+    ],
+    "sizes": [
+      "33px",
+      "calc(100% - 66px)",
+      "33px"
+    ],
+    "title": "row-col",
+    "updatedOn": 1516983048652
+  },
+  {
+    "css": "",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<canvas id=\"gc\" width=\"600\" height=\"500\"></canvas>\n",
+    "htmlMode": "html",
+    "id": "item-Ae9fl75JU5",
+    "js": "px = py = 200;\nxv = yv = 0;\ngrav = 0.5;\nonG = false;\nholdLeft = holdRight = false;\nplat = [];\n\nwindow.onload = function() {\n  canv = document.getElementById(\"gc\");\n  ctx = canv.getContext(\"2d\");\n  setInterval(update,1000/30);\n  document.addEventListener(\"keydown\",keyDown);\n  document.addEventListener(\"keyup\",keyUp);\n  for(var i=0;i<50;i++){\n    plat.push({\n      x:Math.random()*canv.width,\n      y:Math.random()*canv.height,\n      w:Math.random()*100+30,\n      h:Math.random()*30+20\n    });\n  }  \n}\nfunction update(){\n  \n  if(holdLeft){\n    xv = -2;\n  }\n  if(holdRight){\n    xv = 2;\n  }\n  px+=xv;\n  py+=yv;\n  if(onG){\n    xv *= 0.8;\n  }else{\n    yv += grav; \n  }\n  \n  onG = false;\n  for(var i=0;i<50;i++){\n    if(px>plat[i].x && px<plat[i].x+plat[i].w && \n      py>plat[i].y && py<plat[i].y+plat[i].h){\n      py = plat[i].y; \n      onG = true; \n    }\n  } \n  \n  ctx.fillStyle = \"black\";\n  ctx.fillRect(0,0,canv.width,canv.height);\n  ctx.fillStyle = \"white\";\n  ctx.fillRect(px-5,py-20,10,20);\n  for(var i=0;i<50;i++){\n    ctx.fillRect(plat[i].x,plat[i].y,plat[i].w,plat[i].h); \n  }\n}\nfunction keyDown(evt){\n  switch(evt.keyCode){\n    case 37:\n      holdLeft = true;\n      break;\n    case 38:\n      if(onG){\n        yv = -10;\n      }\n      break;\n    case 39:\n      holdRight = true;\n      break;\n  }\n}\nfunction keyUp(evt){\n  switch(evt.keyCode){\n    case 37:\n      holdLeft = false;\n      break;\n    case 38:\n      if(yv < -3){\n        yv = -3;\n      }\n      break;\n    case 39:\n      holdRight = false;\n      break;\n  }\n}",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      50.8785,
+      49.1215
+    ],
+    "sizes": [
+      "33px",
+      "33px",
+      "calc(100% - 66px)"
+    ],
+    "title": "platformer",
+    "updatedOn": 1514945294440
+  },
+  {
+    "css": "",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "",
+    "htmlMode": "html",
+    "id": "item-BCz0NbN3j6",
+    "js": "var Garu = {};\nGaru.val = \"Garu\";\nGaru.init = function(){\n  console.log(\"Garu init\");\n}\n\n/*\n  Garu.World\n*/\nGaru.World = {};\n(function(){\n  var World = Garu.World;\n  World.val = \"World\";\n  World.init = function(){\n    console.log(\"Garu.World init\");\n  }\n})();\n\n/*\n  Garu.Render\n*/\nGaru.Render = {};\n(function(){\n  var Render = Garu.Render;\n  Render.val = \"Render\";\n  Render.init = function(){\n    console.log(\"Garu.Render init\");\n  }\n})();\n\nGaru.init();\nconsole.log(Garu.val);\n\nvar World = Garu.World;\nWorld.init();\nconsole.log(World.val);\n\nvar Render = Garu.Render;\nRender.init();\nconsole.log(Render.val);\n\n\n\n\n",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      50,
+      50
+    ],
+    "sizes": [
+      "33px",
+      "33px",
+      "calc(100% - 66px)"
+    ],
+    "title": "frame1",
+    "updatedOn": 1516597894199
+  },
+  {
+    "css": ".main{\n  position:relative;\n  width:300px;\n  height:500px;\n  background:#ddd;\n  overflow:hidden;\n}\n.page{\n  font-size:0;\n  position:absolute;\n  top:0;\n  left:0;\n  width:300px;\n  height:500px;\n  transition:all 0.4s;\n}\n.nowPage{ \n  background:skyblue;\n}\n.newPage{\n  left:300px;\n  background:tomato;\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div class=\"main\">\n  <div class=\"nowPage page\">\n    <button id=\"open\">open</button>\n  </div>\n  <div class=\"newPage page\">\n    <button id=\"back\">back</button>\n  </div>\n</div>",
+    "htmlMode": "html",
+    "id": "item-Cn1xlrbVYl",
+    "js": "document.getElementById(\"open\").onclick = function(){\n  this.parentNode.style.left = \"-300px\";\n  document.querySelector(\".newPage\").style.left = \"0\";\n}\ndocument.getElementById(\"back\").onclick = function(){\n  this.parentNode.style.left = \"300px\";\n  document.querySelector(\".nowPage\").style.left = \"0\";\n}\n",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      50,
+      50
+    ],
+    "sizes": [
+      "calc(33.33% - 3px)",
+      "calc(24.231% - 6px)",
+      "calc(42.4765% - 3px)"
+    ],
+    "title": "window",
+    "updatedOn": 1516683126919
+  },
+  {
+    "css": "html{\n  height:100%;\n}\nbody{\n  margin:0;\n  padding:0;\n  height:100%;\n  text-align:center;\n}\n.header{\n  height:50px;\n  background:tomato;\n}\n.main{\n  min-height:calc(100% - 100px);\n  background:skyblue;\n}\n.footer{\n  height:50px;\n  background:#ff7f7f;\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div class=\"header\">header</div>\n<div class=\"main\">main</div>\n<div class=\"footer\">footer</div>",
+    "htmlMode": "html",
+    "id": "item-FXzZD2ZIIi",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      49.5608,
+      50.4381
+    ],
+    "sizes": [
+      "calc(33.33% - 3px)",
+      "calc(61.0477% - 6px)",
+      "calc(5.64263% - 3px)"
+    ],
+    "title": "float-1",
+    "updatedOn": 1513228882110
+  },
+  {
+    "css": "#box{\n  width:60%;\n  height:500px;\n}\n.item{\n  overflow:hidden;\n  border-bottom:1px solid #ddd;\n  padding:10px;\n}\n.item .left{\n  float:left;\n  width:30%;\n}\n.item .right{\n  overflow:hidden;\n  word-wrap:break-word;\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div id=\"box\">\n  <div class=\"item\">\n    <div class=\"left\">序号</div>\n    <div class=\"right\">候选项</div>\n  </div>\n  <div class=\"item\">\n    <div class=\"left\">1123</div>\n    <div class=\"right\">aaaa</div>\n  </div>\n  <div class=\"item\">\n    <div class=\"left\">2</div>\n    <div class=\"right\">b</div>\n  </div>\n  <div class=\"item\">\n    <div class=\"left\">3</div>\n    <div class=\"right\">c</div>\n  </div>\n</div>",
+    "htmlMode": "html",
+    "id": "item-FidrgYkuvj",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      51.0981,
+      48.9019
+    ],
+    "sizes": [
+      "calc(46.5664% - 3px)",
+      "calc(42.2953% - 6px)",
+      "calc(11.1285% - 3px)"
+    ],
+    "title": "random",
+    "updatedOn": 1518507473112
+  },
+  {
+    "css": "body{\n  margin:0;\n  padding:0;\n  margin:0 auto;\n  width:80%;\n}\n\n.header{\n  width:100%;\n  height:50px;\n  line-height:50px;\n  background:skyblue;\n  text-align:center;\n  font-size: 20px;\n  position:fixed;\n  top:0;\n  left:0;\n  right:0;\n}\n\n.left{\n  width:240px;\n  height:100%;\n  background:tomato;\n  position:fixed;\n  top:50px;\n  overflow-y:auto;\n}\n\n.left .title{\n  width:240px;\n  height:50px;\n  position:fixed;\n  background:lightcoral;\n}\n\n.left .content{\n  margin:5px;\n  margin-top:55px;\n  margin-bottom:100px;\n  background:#ddd;\n}\n\n.main{\n  background:#ddd;\n  padding-left:240px;\n}\n\n.main .content{\n  background:pink;\n  padding:20px;\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div class=\"header\">Header</div>\n<div class=\"left\">\n  <div class=\"title\"></div>\n  <div class=\"content\">\n      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />123123\n  </div>\n</div>\n<div class=\"main\">\n  <div class=\"content\">\n      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />123123\n  </div>\n</div>",
+    "htmlMode": "html",
+    "id": "item-Gy0FyrwE7c",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      41.8009,
+      58.1957
+    ],
+    "sizes": [
+      "calc(37.7865% - 3px)",
+      "calc(56.5488% - 6px)",
+      "calc(5.64263% - 3px)"
+    ],
+    "title": "fix header && left",
+    "updatedOn": 1514342073057
+  },
+  {
+    "css": "",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "",
+    "htmlMode": "html",
+    "id": "item-HdQxim1TXY",
+    "js": "console.log(\"start\");\n\nsetTimeout(function(){\n  console.log(\"setTimeout\");\n});\n\nnew Promise(function(resolve,reject){\n  console.log(\"promise\")\n  resolve();\n}).then(function(){\n  console.log(\"then\");\n});\n\nconsole.log(\"end\");",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      50,
+      50
+    ],
+    "sizes": [
+      "33px",
+      "33px",
+      "calc(100% - 66px)"
+    ],
+    "title": "Untitled 22-1-10:2",
+    "updatedOn": 1516587881425
+  },
+  {
+    "css": "",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "",
+    "htmlMode": "html",
+    "id": "item-Ileyeg5Dxh",
+    "js": "var Garu = (function(){\n  function Garu(){\n    this.val = \"garu\";\n  }\n  \n  Garu.prototype.init = function(){\n    console.log(\"Garu init\");\n  }\n  \n  var World = Garu.prototype.World = {};\n  World.val = \"World\";\n  World.init = function(){\n    console.log(\"Garu.World init\");    \n  }\n  \n  var Render = Garu.prototype.Render = {};\n  Render.val = \"Render\";\n  Render.init = function(){\n    console.log(\"Garu.Render init\");    \n  }\n  \n  return Garu;\n})();\n\n/*使用*/\nvar Garu = new Garu();\nGaru.init();\nconsole.log(Garu.val);\n\nvar World = Garu.World;\nWorld.init();\nconsole.log(World.val);\n\nvar Render = Garu.Render;\nRender.init();\nconsole.log(Render.val);\n",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      50,
+      50
+    ],
+    "sizes": [
+      "33px",
+      "33px",
+      "calc(100% - 66px)"
+    ],
+    "title": "frame2",
+    "updatedOn": 1515635836365
+  },
+  {
+    "css": "body{\n  margin:0;\n  padding:0;\n  width:100%;\n  min-height:100vh;\n  display:table;\n  text-align:center;\n}\n.header,.main,.footer{\n  display:table-row;\n}\n.header{\n  height:50px;\n  background:tomato;\n}\n.main{\n  background:skyblue;\n}\n.footer{\n  height:50px;\n  background:#9d70ff;\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div class=\"header\">header</div>\n<div class=\"main\">main</div>\n<div class=\"footer\">footer</div>",
+    "htmlMode": "html",
+    "id": "item-KW43gd9a2r",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      31.6984,
+      68.3016
+    ],
+    "sizes": [
+      "calc(42.021% - 3px)",
+      "calc(52.3193% - 6px)",
+      "calc(5.64263% - 3px)"
+    ],
+    "title": "table-1",
+    "updatedOn": 1513229837889
+  },
+  {
+    "css": "body{\n  margin:0;\n  padding:0;\n  background:#404593;\n}\n.one{\n  width:200px;\n  height:200px;\n  background:#fff;\n  position:absolute;\n  top:0;\n  left:0;\n  padding:20px;\n  box-sizing:border-box;\n}\n.two{\n  height:200px;\n  background:#FD76B2;\n  padding-left:200px;\n  padding-right:200px;\n}\n.two-child{\n  padding:20px;\n}\n.three{\n  width:200px;\n  height:200px;\n  background:skyblue;\n  position:absolute;\n  top:0;\n  right:0;\n  padding:20px;\n  box-sizing:border-box;\n}\n@media screen and (max-width:400px){\n  .d{\n    position:static;\n  }\n  \n  .one{\n    width:100%;\n    float:none;\n  }\n  .two{\n    width:100%;\n    height:200px;\n    padding:0;\n  }\n  .three{\n    width:100%;\n    height:200px;\n    background:skyblue;\n    float:none;\n  }\n}\na{\n  position:absolute;\n  top:50%;\n  border-radius: 50px;\n  font-weight: 600;\n  font-size: 14px;\n  text-decoration: none;\n  text-align:center;  \n}\n.a{\n  padding: 14px 27px;\n  width:70px;\n  left:37%;\n  transform:translate(-50%,-50%);\n  background: #FD76B2;\n  /* box-shadow: 5px 5px 50px #e4498e; */\n  color:#fff;\n}\n.b{\n  padding: 12px 25px;\n  width:70px;\n  left:62%;\n  transform:translate(-50%,-50%);\n  border:2px solid #fff;\n  color:#fff;\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div class=\"d one\">123123123123</div>\n<div class=\"d two\">\n  <div class=\"two-child\">asdasdasd</div>\n</div>\n<div class=\"d three\">asdasdasdasd</div>\n\n\n<a class=\"a\" href=\"\">GETSTART</a>\n<a class=\"b\" href=\"\">GITHUB</a>\n",
+    "htmlMode": "html",
+    "id": "item-KbDNvAPQim",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      53.8067,
+      46.1875
+    ],
+    "sizes": [
+      "calc(33.3% - 3px)",
+      "calc(56.0296% - 6px)",
+      "calc(10.6583% - 3px)"
+    ],
+    "title": "light",
+    "updatedOn": 1515508660702
+  },
+  {
+    "css": "body{\n  margin:0;\n  padding:0;\n  width:100%;\n  height:100vh;\n  display:table;\n  text-align:center;\n}\n.left,.middle,.right{\n  display:table-cell;\n}\n.left{\n  width:300px;\n  background:tomato;\n}\n.middle{\n  background:#ffe69e;\n}\n.right{\n  width:200px;\n  background:skyblue;\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div class=\"left\">left</div>\n<div class=\"middle\">middle</div>\n<div class=\"right\">right</div>",
+    "htmlMode": "html",
+    "id": "item-QyO18oNhmE",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      31.8448,
+      68.1529
+    ],
+    "sizes": [
+      "calc(33.33% - 3px)",
+      "calc(61.0477% - 6px)",
+      "calc(5.64263% - 3px)"
+    ],
+    "title": "table-5",
+    "updatedOn": 1513171398676
+  },
+  {
+    "css": "body{\n  margin:0;\n  padding:0;\n  width:100%;\n  height:100vh;\n  display:table;\n  text-align:center;\n}\n.left,.right{\n  display:table-cell;\n}\n.left{\n  width:300px;\n  background:tomato;\n}\n.right{\n  background:skyblue;\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div class=\"left\">left</div>\n<div class=\"right\">right</div>",
+    "htmlMode": "html",
+    "id": "item-RJjFGEu7oo",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      41.0688,
+      58.93
+    ],
+    "sizes": [
+      "calc(33.33% - 3px)",
+      "calc(61.0477% - 6px)",
+      "calc(5.64263% - 3px)"
+    ],
+    "title": "table-4",
+    "updatedOn": 1513230661798
+  },
+  {
+    "css": "",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "",
+    "htmlMode": "html",
+    "id": "item-SHlEkSNchy",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      50,
+      50
+    ],
+    "sizes": [
+      "calc(33.3% - 3px)",
+      "calc(33.3% - 6px)",
+      "calc(33.3% - 3px)"
+    ],
+    "title": "Untitled 8-1-22:56",
+    "updatedOn": 1515506870830
+  },
+  {
+    "css": "",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "",
+    "htmlMode": "html",
+    "id": "item-SvJ5RA6Ho6",
+    "js": "var arr = [1123213,2,3,4];\nfunction del(index){\n  var str = arr.join(\"\");\n  str = str.substring(0,index) + str.substring(index+1);\n  arr = str.split(\"\");\n  return arr;\n}\n",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      45.3148,
+      54.6841
+    ],
+    "sizes": [
+      "33px",
+      "33px",
+      "calc(100% - 66px)"
+    ],
+    "title": "Untitled 8-2-16:55",
+    "updatedOn": 1518510142779
+  },
+  {
+    "css": "body{\n  margin:0;\n  padding:0;\n  min-height:100vh;\n  display:table;\n  text-align:center;\n}\n.left{\n  display:table-cell;\n  width:200px;\n  background:tomato;\n}\n.right{\n  display:table;\n  width:calc(100vw - 200px);\n  height:100vh;\n}\n.header,.main,.footer{\n  display:table-row;\n}\n.header{\n  height:50px;\n  background:skyblue;\n}\n.main{\n  background:#fcea96;\n}\n.footer{\n  height:50px;\n  background:#9d70ff;\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div class=\"left\">left</div>\n<div class=\"right\">\n  <div class=\"header\">header</div>\n  <div class=\"main\">main</div>\n  <div class=\"footer\">footer</div>\n</div>",
+    "htmlMode": "html",
+    "id": "item-TFiDbCgRXe",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      39.8975,
+      60.0991
+    ],
+    "sizes": [
+      "calc(26.6605% - 3px)",
+      "calc(67.6798% - 6px)",
+      "calc(5.64263% - 3px)"
+    ],
+    "title": "table-3",
+    "updatedOn": 1513230620578
+  },
+  {
+    "css": "",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<canvas id=\"canvas\" width=\"500\" height=\"400\"></canvas>",
+    "htmlMode": "html",
+    "id": "item-VJkI5oqqzn",
+    "js": "var canv = document.getElementById('canvas');\nvar ctx = canv.getContext('2d');\n\ndrawLine(0,0,50,50,\"blue\");\ndrawLine(0,0,90,70,\"blue\");\ndrawLine(0,0,100,200,\"blue\");\nctx.beginPath();\nctx.strokeStyle = \"green\";\nctx.moveTo(50,50);\nctx.quadraticCurveTo(90,70,100,200);\nctx.stroke();\n\nvar img = new Image();\n  img.onload = function(){\n    ctx.drawImage(img,0,0,400,400);\n  };\n  img.src = 'https://mdn.mozillademos.org/files/5397/rhino.jpg';\n\nvar t = ctx.fillText(\"hello world\",0,100);\nvar text = ctx.measureText(t); // TextMetrics object\nconsole.log(text.width); // 16;\n\n\nfunction drawLine(x1,y1,x2,y2,color){\n  ctx.beginPath();\n  ctx.strokeStyle = color;\n  ctx.moveTo(x1,y1);\n  ctx.lineTo(x2,y2);\n  ctx.stroke();\n  ctx.closePath();\n}\nfunction drawArc(x,y,r,sa,ea,dir,color,type){\n  ctx.beginPath();\n  type == 0 ? ctx.strokeStyle=color : ctx.fillStyle=color;\n  ctx.arc(x,y,r,(Math.PI/180)*sa,(Math.PI/180)*ea,dir);\n  type == 0 ? ctx.stroke() : ctx.fill();\n}\nfunction drawShape(arr,color,type){\n  ctx.beginPath();\n  type == 0 ? ctx.strokeStyle=color : ctx.fillStyle=color;\n  ctx.moveTo(arr[0][0],arr[0][1]);\n  for(var i=1;i<arr.length;i++){\n    ctx.lineTo(arr[i][0],arr[i][1]);\n  }\n  type == 0 ? ctx.stroke() : ctx.fill();\n}",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      50,
+      50
+    ],
+    "sizes": [
+      "33px",
+      "33px",
+      "calc(100% - 66px)"
+    ],
+    "title": "canvas",
+    "updatedOn": 1514950778315
+  },
+  {
+    "css": "#main{\n  position:absolute;\n  top:50%;\n  left:50%;\n  transform:translate(-50%,-50%);\n}\n#main label{\n  position:absolute;\n  top:50%;\n  left:22px;\n  transform:translate(0,-50%);\n  transition:all 0.3s;\n  color:#ddd;\n  z-index:-1;\n}\n#main input{\n  height:10px;\n  border:2px solid #ddd;\n  outline:none;\n  font-size:20px;\n  padding:20px;\n  transition:all 0.3s;\n  background:none;\n  z-index:5;\n}\n#main input:focus{\n  border:2px solid #00a2f9;\n  transition:all 0.3s;\n}\n#main.focus label{\n  top:-25px;\n  left:-5px;\n  color:#262626;\n  transform:scale(0.9);\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div id=\"main\">\n  <input id=\"input\" type=\"text\"/>\n  <label>User Name</label>\n</div>\n\n",
+    "htmlMode": "html",
+    "id": "item-byo486ZpTQ",
+    "js": "var inp = document.getElementById(\"input\");\nvar main = document.getElementById(\"main\");\ninp.onfocus = function(){\n  if(inp.value == \"\"){\n      main.className += \"focus\";\n  }\n}\ninp.onblur = function(){\n  if(inp.value == \"\"){\n      main.className = \"\";\n  }\n}",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      50,
+      49.9966
+    ],
+    "sizes": [
+      "calc(33.3% - 3px)",
+      "calc(20.8121% - 6px)",
+      "calc(45.9248% - 3px)"
+    ],
+    "title": "float-input",
+    "updatedOn": 1515577871334
+  },
+  {
+    "css": "",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "",
+    "htmlMode": "html",
+    "id": "item-caOLYHb7qj",
+    "js": "keyframe = 200;\npw = ph = 20;\nholdLeft = holdRight = holdUp = holdDown = false;\nconsole.clear();\nwindow.onload = function(){\n  canv = document.createElement(\"canvas\");\n  canv.width = 300;\n  canv.height = 400;\n  ctx = canv.getContext(\"2d\");\n  px = canv.width/2-(pw/2);\n  py = canv.height-40;\n  document.body.appendChild(canv);\n  // setInterval(update,1000/keyframe);\n  document.addEventListener(\"keydown\",keyDown);\n  document.addEventListener(\"keyup\",keyUp);\n}\nfunction update(){\n  drawRect(0,0,canv.width,canv.height,\"black\",1);\n  drawRect(px,py,pw,ph,\"white\",1);\n  if(holdLeft){\n    px--;\n  }\n  if(holdUp){\n    py--;\n  }\n  if(holdRight){\n    px++;\n  }\n  if(holdDown){\n    py++;\n  }\n  if(px < 0){\n    px = 0;\n  }\n  if(px > canv.width-pw){\n    px = canv.width-pw;\n  }\n  if(py > canv.height-ph){\n    py = canv.height-ph;\n  }\n}\nfunction keyDown(evt){ \n  switch(evt.keyCode){\n    case 37:\n      holdLeft = true;\n      break;\n    case 38:\n      holdUp = true;\n      break;\n    case 39:\n      holdRight = true;\n      break;\n    case 40:\n      holdDown = true;\n      break;\n  }\n}\nfunction keyUp(evt){\n  switch(evt.keyCode){\n    case 37:\n      holdLeft = false;\n      break;\n    case 38:\n      holdUp = false;\n      break;\n    case 39:\n      holdRight = false;\n      break;\n    case 40:\n      holdDown = false;\n      break;\n  }\n}\nfunction drawCircle(x,y,r,color,type){\n  ctx.beginPath();\n  type == 0 ? ctx.strokeStyle=color : ctx.fillStyle=color;\n  ctx.arc(x,y,r,0,(Math.PI/180)*360,false);\n  type == 0 ? ctx.stroke() : ctx.fill();\n}\nfunction drawRect(x,y,w,h,color,type){\n  type == 0 ? ctx.strokeStyle = color : ctx.fillStyle = color;\n  type == 0 ? ctx.strokeRect(x,y,w,h) : ctx.fillRect(x,y,w,h);\n}",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      62.6647,
+      37.3341
+    ],
+    "sizes": [
+      "33px",
+      "33px",
+      "calc(100% - 66px)"
+    ],
+    "title": "plane-game",
+    "updatedOn": 1515164203107
+  },
+  {
+    "css": "body{\n  margin:0;\n  padding:0;\n  text-align:center;\n}\n.left{\n  width:200px;\n  height:100vh;\n  background:tomato;\n  float:left;\n  overflow:auto;\n}\n.main{\n  overflow:hidden;\n}\n.header{\n  height:50px;\n  background:skyblue;\n}\n.middle{\n  height:calc(100vh - 100px);\n  background:#ffe86b;\n  overflow:auto;  \n}\n.footer{\n  height:50px;\n  background:#ff7f7f;\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div class=\"left\">left</div>\n<div class=\"main\">\n  <div class=\"header\">header</div>\n  <div class=\"middle\">middle</div>\n  <div class=\"footer\">footer</div>\n</div>",
+    "htmlMode": "html",
+    "id": "item-d5JTfJjTsF",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      43.9239,
+      56.075
+    ],
+    "sizes": [
+      "calc(33.33% - 3px)",
+      "calc(61.0477% - 6px)",
+      "calc(5.64263% - 3px)"
+    ],
+    "title": "float-3",
+    "updatedOn": 1513325023106
+  },
+  {
+    "css": ".main{\n  width:300px;\n  height:100px;\n  background:#ddd;\n  .box1{\n    background:skyblue;\n  }\n  .box2{\n    background:tomato;\n  }\n  .box1,.box2{\n    width:100px;\n    height:100px;\n    float:left;\n  }\n}",
+    "cssMode": "scss",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div class=\"main\">\n  <div class=\"box1\"></div>\n  <div class=\"box2\"></div>\n</div>",
+    "htmlMode": "html",
+    "id": "item-ddaV41FFDP",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      50,
+      50
+    ],
+    "sizes": [
+      "calc(33.33% - 3px)",
+      "calc(55.5716% - 6px)",
+      "calc(11.1285% - 3px)"
+    ],
+    "title": "margin float",
+    "updatedOn": 1513910191262
+  },
+  {
+    "css": "body,html{\n  height:100%;\n}\n.main{\n  position:relative;\n  width:100%;\n  height:100%;\n}\n.left{\n  position:absolute;\n  width:260px;\n  height:100%;\n  left:-300px;\n  background:skyblue;\n  z-index:1000;  \n  box-shadow:5px 0px 10px rgba(0,0,0,.2);\n  transition:all 0.3s;\n}\n.left.left-open{\n  left:0;\n}\n.mask{\n  display:none;\n  position:absolute;\n  height:100%;\n  width:100%;\n  background:rgba(0,0,0,.5);\n  z-index:500;  \n}\n#open{\n  position:absolute;\n  top:10px;\n  left:10px;\n  padding:10px;\n  background:skyblue;\n  cursor:pointer;\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "https://cdnjs.cloudflare.com/ajax/libs/mdui/0.4.0/css/mdui.min.css",
+      "js": "\nhttps://cdnjs.cloudflare.com/ajax/libs/mdui/0.4.0/js/mdui.min.js"
+    },
+    "html": "<div class=\"main\">\n  <div id=\"open\">打开</div>\n  <div class=\"left\"></div>  \n  <div class=\"mask\"></div>\n</div>",
+    "htmlMode": "html",
+    "id": "item-evF7Dd4Ndx",
+    "js": "var open = document.getElementById(\"open\");\nvar left = document.querySelector(\".left\");\nvar mask = document.querySelector(\".mask\");\nopen.onclick = function(){\n  left.className += \" left-open\";\n  mask.style.display = \"block\";\n}\nmask.onclick = function(){\n    left.className += \"left\";\n    mask.style.display = \"none\";\n}",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      45.8272,
+      54.1693
+    ],
+    "sizes": [
+      "calc(33.3% - 3px)",
+      "calc(33.3% - 6px)",
+      "calc(33.3% - 3px)"
+    ],
+    "title": "left-drawer",
+    "updatedOn": 1515994733140
+  },
+  {
+    "css": "body{\n  margin:0;\n  padding:0;\n  background:#d8d8d8;\n}\n#gobang{\n  margin:0 auto;\n  padding:10px;\n  .btns{\n    position:absolute;\n    left:50%;\n    transform:translate(-50%,0);\n    #restart{\n      border-right:1px solid #b7b7b7;\n    }\n    #size{\n      border-left:1px solid #b7b7b7;\n    }\n    #restart,#size{\n      width:100px;\n      height:30px;\n      background:#fff;\n      text-align:center;\n      line-height:30px;\n      cursor:pointer;\n      float:left;\n      box-shadow:0px 1px 3px rgba(0,0,0,.2);\n      &:active{\n        background:#eeebeb;\n      }\n    }\n  }\n  #sizetopup{\n    position:fixed;\n    width:100%;\n    height:100%;\n    background:rgba(0,0,0,.3);\n    top:50%;\n    left:50%;\n    transform:translate(-50%,-50%);\n    display:none;\n    #setting{\n      width:250px;\n      height:25%;\n      background:#fff;\n      position:absolute;\n      top:50%;\n      left:50%;\n      transform:translate(-50%,-50%);\n      text-align:center;\n      padding:10px;\n      box-shadow:0px 2px 10px rgba(0,0,0,.5);\n      display:block;\n      .main{\n        width:90%;\n        position:absolute;\n        top:50%;\n        left:50%;\n        transform:translate(-50%,-50%);\n        .title{\n          padding:10px;\n          font-size:20px;\n        }\n        #input{\n          width:100%;\n          height:35px;\n          border:1px solid #000;\n          outline:none;\n          padding:10px;\n          box-sizing:border-box;\n          font-size:16px;\n        }\n        .btns{\n          width:100%;\n          position:relative;\n          margin-top:20px;\n          #sure,#cancel{\n            width:50%;\n            height:30px;\n            background:#eee;\n            line-height:30px;\n            float:left;\n            cursor:pointer;\n            &:active{\n              background:#dbdbdb;\n            }\n          }\n        }\n      }\n    }\n  }\n  #panel{\n/*     width:500px;\n    height:500px; */\n    margin:40px auto;\n    background:#ffefd1;\n    .piece{\n/*       width:19px;\n      height:19px;\n      border:1px solid #000;\n      padding:2px; */\n      float:left;\n      .black{\n        width:100%;\n        height:100%;\n        background:#000;\n        border-radius:50%;\n        box-shadow:0px 1px 2px rgba(0,0,0,.5);\n      }\n      .white{\n        width:100%;\n        height:100%;\n        background:#fff;\n        border-radius:50%;\n        box-shadow:0px 1px 2px rgba(0,0,0,.5);\n      }\n    }\n  }\n}",
+    "cssMode": "scss",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div id=\"gobang\">\n  <div class=\"btns\">\n    <div id=\"restart\">重新开始</div>\n    <div id=\"size\">棋盘大小</div>\n  </div>\n  <div id=\"sizetopup\">\n    <div id=\"setting\">\n      <div class=\"main\">\n        <div class=\"title\">棋盘大小</div>\n        <input id=\"input\" type=\"text\" placeholder=\"范围:6-20\"/>\n        <div class=\"btns\">\n          <div id=\"sure\">确认</div>      \n          <div id=\"cancel\">取消</div>\n        </div>\n      </div>\n    </div>\n  </div>\n  <!-- <div id=\"panel\">\n    <div class=\"piece\">\n      <div class=\"black\"></div>\n    </div>\n    <div class=\"piece\">\n      <div class=\"white\"></div>\n    </div>\n  </div> -->\n</div>",
+    "htmlMode": "html",
+    "id": "item-fV9KoRQuxs",
+    "js": "//五子棋对象\nvar gobang = function(){\n  \n  var panel = {\n    arr:[],//二维数组\n    width:500,\n    height:500,\n    count:15,\n    div:null,\n  }\n  var piece = {\n    border:1,\n    padding:1,\n    width:panel.width / panel.count,\n    height:panel.height / panel.count,\n  }\n  piece.width -= (2*piece.border+2*piece.padding);\n  piece.height -= (2*piece.border+2*piece.padding);\n  \n  var obj = {\n    panel,\n    piece,\n    nowPiece:0, //0为黑棋，1为白棋,\n    winNum:0\n  }\n  \n  return obj;\n}\n\n//主函数\nfunction __main(){\n  \n  var m = this;\n  \n  //初始化init\n  this.init = () =>{\n    var gb = gobang();\n    \n    this.createPanel(gb);\n    this.createPiece(gb);\n    this.registClick(gb,true);\n  }\n  \n  //创建棋盘panel\n  this.createPanel = (gb) =>{\n    var gobang_div = document.getElementById('gobang');\n    gb.panel.div = document.createElement('div');\n    var panel_div = gb.panel.div;\n    panel_div.id = \"panel\";\n    panel_div.style.width = gb.panel.width + 'px';\n    panel_div.style.height = gb.panel.height + 'px';\n    panel_div.style.overflow = 'hidden';\n    gobang_div.appendChild(panel_div);\n  }\n  \n  //创建棋子容器piece\n  this.createPiece = (gb) =>{\n    var piece_div,rowArr = [];\n    for(let i=1;i<=Math.pow(gb.panel.count,2);i++){\n      piece_div = document.createElement('div');\n      piece_div.className = \"piece\";\n      piece_div.style.width = gb.piece.width + 'px';\n      piece_div.style.height = gb.piece.height + 'px';\n      piece_div.style.border = gb.piece.border + 'px solid #000';\n      piece_div.style.padding = gb.piece.padding + 'px';\n      gb.panel.div.appendChild(piece_div);\n      \n      //行数组\n      rowArr.push(piece_div);\n      \n      if(i % gb.panel.count == 0 && i!=1){\n        gb.panel.arr.push(rowArr);\n        rowArr = [];\n      }\n    }\n  } \n  \n  //注册点击事件onclick\n  this.registClick = (gb,turn) =>{\n    \n    if(turn){\n      var topup = document.getElementById('sizetopup');\n      //重新开始\n      document.getElementById('restart').onclick = function(){\n        m.restart(gb);\n      }\n      document.getElementById('size').onclick = function(){\n        topup.style.display = 'block';\n      }\n      document.getElementById('cancel').onclick = function(){\n        topup.style.display = 'none';\n      }\n      \n      //注册\n      for(let i=0;i<gb.panel.arr.length;i++){\n        for(let j=0;j<gb.panel.arr[i].length;j++){\n          gb.panel.arr[i][j].onclick = function(){\n            if(this.innerHTML == \"\"){\n              if(gb.nowPiece == 0){\n                m.createPieceChild(this,gb,0,i,j);\n              }else if(gb.nowPiece == 1){\n                m.createPieceChild(this,gb,1,i,j);\n              }\n            }else{\n              alert(\"此处有子\");\n            }\n          }\n        }\n      }\n    }else{\n      //取消\n      for(let i=0;i<gb.panel.arr.length;i++){\n        for(let j=0;j<gb.panel.arr[i].length;j++){\n          gb.panel.arr[i][j].onclick = function(){}\n        }\n      }\n    }\n    \n  }\n  \n  //创建黑白棋pieceChild\n  this.createPieceChild = (obj,gb,type,x,y) =>{\n    //创建棋子\n    var pieceChild = document.createElement('div'); \n    type == 0 ? pieceChild.className = 'black' : pieceChild.className = 'white'; \n    obj.appendChild(pieceChild);\n\n    //切换\n    type == 0 ? gb.nowPiece = 1 : gb.nowPiece = 0;\n    \n    m.detectWinner(gb,type,x,y);\n  }\n  \n  //检测\n  this.detect = (gb,line,type) =>{\n    if(line.innerHTML.indexOf(type)!=-1){\n      gb.winNum++;\n      if(gb.winNum == 5){\n        var restart = type == 'black' ? confirm(\"黑棋赢!!\\n是否重新开始?\") : confirm(\"白棋赢!!\\n是否重新开始?\");\n        if(restart){\n          m.restart(gb);\n          return;\n        }else{\n          m.registClick(gb,false);\n          return;\n        }\n      }\n    }else{\n      gb.winNum = 0;\n    }\n  }\n  \n  //检测赢家winner\n  this.detectWinner = (gb,type,x,y) =>{\n    \n    var row,column;\n    \n    //行检测\n    for(let i=0;i<gb.panel.count;i++){\n      row = gb.panel.arr[x][i];\n      if(type == 0){ //黑棋\n        m.detect(gb,row,'black');\n      }else if(type == 1){ //白棋\n        m.detect(gb,row,'white');\n      }\n    }\n    gb.winNum = 0;\n    //列检测\n    for(let j=0;j<gb.panel.count;j++){\n      column = gb.panel.arr[j][y];\n      if(type == 0){ //黑棋\n        m.detect(gb,column,'black');\n      }else if(type == 1){ //白棋\n        m.detect(gb,column,'white');\n      }\n    }\n    gb.winNum = 0;\n    //左斜线检测\n    var nx=x,ny=y,obj;\n    for(var z=0;z < gb.panel.count;z++){\n      if(x == 0 || y == 0){\n        break; \n      }\n      x--;\n      y--;\n    }\n    for(let i=0;i<gb.panel.count;i++){\n      if(x==gb.panel.count || y==gb.panel.count){\n        break;\n      }\n      obj = gb.panel.arr[x++][y++];\n      if(type == 0){ //黑棋\n        m.detect(gb,obj,'black');\n      }else if(type == 1){ //白棋\n        m.detect(gb,obj,'white');\n      }\n    }\n    gb.winNum = 0;\n    \n    //右斜线检测\n    x = nx,y = ny;\n    for(var z=0;z < gb.panel.count;z++){\n      if(x==0 || y==gb.panel.count-1){\n        break;\n      }\n      x--;\n      y++;\n    }\n    for(let i=0;i<gb.panel.count;i++){\n      if(x == gb.panel.count || y == -1){\n        break;\n      }\n      obj = gb.panel.arr[x++][y--];\n      if(type == 0){ //黑棋\n        m.detect(gb,obj,'black');\n      }else if(type == 1){ //白棋\n        m.detect(gb,obj,'white');\n      }\n    }\n    gb.winNum = 0;\n    \n  }\n  \n  //重新开始\n  this.restart = (gb) =>{\n    gb.panel.div.parentNode.removeChild(gb.panel.div);   \n    m.init(); \n  }\n  \n}\n\nconsole.clear();\nvar main = new __main();\nmain.init();\n\n\n\n\n",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      43.5578,
+      56.4307
+    ],
+    "sizes": [
+      "calc(33.3% - 3px)",
+      "calc(33.3% - 6px)",
+      "calc(33.3% - 3px)"
+    ],
+    "title": "gobang",
+    "updatedOn": 1513785801708
+  },
+  {
+    "css": "body{\n  margin:0;\n  padding:0;\n  background:#eee;\n}\ndetails{\n  display:inline-block;\n}\ndetails ::-webkit-details-marker{\n  display:none;\n}\nsummary{\n  text-align:center;\n  width:100px;\n  padding:5px;\n  cursor:pointer;\n  outline:none;\n  user-select:none;\n}\nsummary::after{\n  \n}\nsummary:hover{\n  background:#fff;\n}\n.box{\n  padding:5px;\n  width:100px;\n  transition:all 1s;\n  background:#fff;\n}\n.box a{\n  display:block;\n  text-decoration:none;\n  color:#000;\n  padding:5px;  \n}\n.box a:hover{\n  background:#eee;\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<details>\n    <summary>我的消息</summary> \n    <div class=\"box\">\n        <a href>我的回答<sup>12</sup></a>\n        <a href>我的私信</a>\n        <a href>未评价订单<sup>2</sup></a>\n        <a href>我的关注</a>\n    </div>\n</details>",
+    "htmlMode": "html",
+    "id": "item-fc6HkEpo4O",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      50,
+      50
+    ],
+    "sizes": [
+      "calc(34.8109% - 3px)",
+      "calc(59.5268% - 6px)",
+      "calc(5.64263% - 3px)"
+    ],
+    "title": "details",
+    "updatedOn": 1516095957815
+  },
+  {
+    "css": "body{\n  margin:0;\n  padding:0;\n  text-align:center;\n}\n.header{\n  height:50px;\n  background:tomato;\n}\n.main{\n  overflow:hidden;\n}\n.main .left{\n  width:200px;\n  height:calc(100vh - 100px);\n  background:#7452fe;\n  float:left;\n  overflow:auto;\n}\n.main .right{\n  height:calc(100vh - 100px);\n  background:skyblue;\n  overflow:auto;\n}\n.footer{\n  height:50px;\n  background:#ff7f7f;\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div class=\"header\">header</div>\n<div class=\"main\">\n  <div class=\"left\">left</div>\n  <div class=\"right\">right</div>\n</div>\n<div class=\"footer\">footer</div>",
+    "htmlMode": "html",
+    "id": "item-hYXMclpy9N",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      49.5608,
+      50.4381
+    ],
+    "sizes": [
+      "calc(33.33% - 3px)",
+      "calc(61.0477% - 6px)",
+      "calc(5.64263% - 3px)"
+    ],
+    "title": "float-2",
+    "updatedOn": 1513310553273
+  },
+  {
+    "css": ".pro{\n  position:fixed;\n  top:0;\n  left:0;\n  width:0%;\n  height:5px;\n  background:skyblue;\n  transition:all 0.5s; \n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div class=\"pro\"></div>",
+    "htmlMode": "html",
+    "id": "item-j4TbUJcaCj",
+    "js": "var pro = document.querySelector(\".pro\");\nvar len = 0;\nsetTimeout(function(){\n  if(len <= 100){\n    pro.style.width = len + \"%\";\n    len+=50;\n  }else{\n    pro.style.top = \"-5px\"; \n  }\n  setTimeout(arguments.callee,500);\n},500);",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      42.0205,
+      57.9784
+    ],
+    "sizes": [
+      "calc(14.5915% - 3px)",
+      "calc(34.3113% - 6px)",
+      "calc(51.0947% - 3px)"
+    ],
+    "title": "pro",
+    "updatedOn": 1516982239120
+  },
+  {
+    "css": "body{\n  margin:0;\n  padding:0;\n}\n\n.main{\n  $w:200px !global;\n  $h:200px !global;\n  width:$w;\n  height:$h;\n  background:tomato;\n  overflow:hidden;\n  .content{\n    width:100px;\n    height:100px;\n    background:skyblue;\n    margin:{\n      left:10px;\n      top:10px;\n    }\n  }\n}\n\n.main{\n  &-one{\n    color:red;\n  }\n  &-two{\n    color:green;\n  }\n  &-three{\n    color:blue;\n  }\n}\n\n@mixin mainstyle($word){\n  \n  #{$word}{\n    text-decoration:none;\n  }\n  \n  #{$word}:hover{\n    text-decoration:underline;\n  }\n}\n@include mainstyle(\".main a\");\n\n",
+    "cssMode": "scss",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div class=\"main\">\n  <div class=\"content\">\n    <a href=\"#\">goto</a>\n  </div>\n</div>\n<div class=\"main-one\">one</div>\n<div class=\"main-two\">two</div>\n<div class=\"main-three\">three</div>",
+    "htmlMode": "html",
+    "id": "item-kMQexlDt3F",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      50,
+      50
+    ],
+    "sizes": [
+      "calc(40.3458% - 3px)",
+      "calc(54.6532% - 6px)",
+      "33px"
+    ],
+    "title": "SCSS",
+    "updatedOn": 1513667809547
+  },
+  {
+    "css": ".msg{\n  position:fixed;\n  min-width:200px;\n  padding:15px;\n  background:#ee6cad;\n  color:#fff;\n  box-shadow:0px 0px 7px #ee6cad;\n  top:-70px;\n  left:50%;\n  transform:translate(-50%,0);\n  transition:all 0.2s;\n}\n.msg.open{\n  top:0;\n  transition:all 0.2s;\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<button id=\"btn\">打开</button>\n<div class=\"msg\">\n  hello world!!!\n</div>",
+    "htmlMode": "html",
+    "id": "item-q0fAtVd8BT",
+    "js": "document.getElementById(\"btn\").onclick = function(){\n  document.querySelector('.msg').className += \" open\";\n  setTimeout(function(){\n    document.querySelector('.msg').className = \"msg\";\n  },2000);\n}",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      50,
+      50
+    ],
+    "sizes": [
+      "calc(33.3% - 3px)",
+      "calc(33.3% - 6px)",
+      "calc(33.3% - 3px)"
+    ],
+    "title": "snackbar",
+    "updatedOn": 1516603342161
+  },
+  {
+    "css": "#main{\n  position:absolute;\n  top:50%;\n  left:50%;\n  transform:translate(-50%,-50%);\n  width:200px;\n  height:200px;\n  background:#ddd;\n  overflow:hidden;\n}\n.txt{\n  position:absolute;\n  width:200px;\n  height:200px;\n  text-align:center;\n  line-height:200px;\n  transition:all 0.6s;\n  top:0;\n  left:0;\n  font-size:30px;\n}\n.one{\n  background:tomato;\n}\n.two{\n  top:200px;\n  background:skyblue;\n}\n#main:hover .one{\n  top:-200px;\n}\n#main:hover .two{\n  top:0;\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div id=\"main\">\n  <div class=\"txt one\">hello</div>\n  <div class=\"txt two\">world</div>\n</div>",
+    "htmlMode": "html",
+    "id": "item-swGizgOunO",
+    "js": "",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      50,
+      50
+    ],
+    "sizes": [
+      "calc(34.3383% - 3px)",
+      "calc(59.9971% - 6px)",
+      "calc(5.64263% - 3px)"
+    ],
+    "title": "scroll-div",
+    "updatedOn": 1515595895142
+  },
+  {
+    "css": "body,html{\n  margin:0;\n  padding:0;\n  height:100%;\n}\n#box{\n  width:600px;\n  height:500px;\n  overflow:hidden;\n  position:absolute;\n  top:50%;\n  left:50%;\n  transform:translate(-50%,-50%);\n}\n#left{\n  width:calc(30% - 5px);\n  height:100%;  \n  background:skyblue;\n  float:left;\n}\n\n#resize{\n  width:5px;\n  height:100%;\n  cursor: w-resize;\n  float:left;\n}\n\n#right{\n  float:right;\n  width:70%;\n  height:100%;  \n  background:tomato;\n}",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<div id=\"box\">\n  <div id=\"left\"></div>\n  <div id=\"resize\"></div>\n  <div id=\"right\"></div>\n</div>\n",
+    "htmlMode": "html",
+    "id": "item-uUEsVJgRT5",
+    "js": "window.onload = function(){\n  var resize = document.getElementById(\"resize\");\n  var left = document.getElementById(\"left\");\n  var right = document.getElementById(\"right\");\n  var box = document.getElementById(\"box\");\n  resize.onmousedown = function(e){\n    var startX = e.clientX;\n    resize.left = resize.offsetLeft;\n    document.onmousemove = function(e){\n      var endX = e.clientX;\n\n      var moveLen = resize.left + (endX - startX);\n\n      var maxT = box.clientWidth - resize.offsetWidth;\n      if(moveLen<150) moveLen = 150; \n      if(moveLen>maxT-150) moveLen = maxT-150;\n\n      resize.style.left = moveLen;\n      left.style.width = moveLen + \"px\";\n      right.style.width = (box.clientWidth - moveLen - 5) + \"px\";\n    }\n    document.onmouseup = function(evt){\n      document.onmousemove = null;\n      document.onmouseup = null; \n      resize.releaseCapture && resize.releaseCapture();\n    }\n    resize.setCapture && resize.setCapture();\n    return false;\n  }\n}\n",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      42.6794,
+      57.3138
+    ],
+    "sizes": [
+      "calc(33.3% - 3px)",
+      "calc(33.3% - 6px)",
+      "calc(33.3% - 3px)"
+    ],
+    "title": "resize",
+    "updatedOn": 1515861963003
+  },
+  {
+    "css": "",
+    "cssMode": "css",
+    "externalLibs": {
+      "css": "",
+      "js": ""
+    },
+    "html": "<canvas id=\"canvas\" width=\"640\" height=\"480\"></canvas>",
+    "htmlMode": "html",
+    "id": "item-wAReQo8rvO",
+    "js": "p1y = p2y = 40;\npt = 10;//板宽度\nph = 100;//板高度\nbx = by = 50;//球横纵坐标\nbd = 5;//球宽高\nxv = -6;//球横方向速度\nyv = 6;//球纵方向速度\n// ai = 0;\npscore = ascore = 0;\ndir = 1;\n\npv = 7;//板速度\n\np1Up = p1Down = p2Up = p2Down = false;\n\nwindow.onload = function(){\n  canv = document.getElementById(\"canvas\");\n  cc = canv.getContext(\"2d\");\n  bx = canv.width/2;\n  by = Math.random()*canv.height/2;\n  time = setInterval(update,1000/30);\n  // while(ai<0.5 || ai>0.9){\n  //   ai = Math.random().toFixed(2);\n  // }\n  document.addEventListener(\"keydown\",keyDown);\n  document.addEventListener(\"keyup\",keyUp);\n}\nfunction keyDown(evt){\n  switch(evt.keyCode){\n    case 38:\n      p2Up = true;\n      break;\n    case 40:\n      p2Down = true;\n      break;\n    case 87:\n      p1Up = true;\n      break;\n    case 83:\n      p1Down = true;\n      break;\n  }\n}\nfunction keyUp(evt){\n  switch(evt.keyCode){\n    case 38:\n      p2Up = false;\n      break;\n    case 40:\n      p2Down = false;\n      break;\n    case 87:\n      p1Up = false;\n      break;\n    case 83:\n      p1Down = false;\n      break;\n  }\n}\nfunction mouseMove(evt){\n  p1y = evt.clientY-ph/2;\n  if(p1y<0){\n    p1y = 0;\n  }\n  if(p1y>canv.height-ph){\n    p1y = canv.height-ph;\n  }\n}\nfunction reset(){\n  bx = canv.width/2;\n  by = Math.random()*canv.height;\n  xv = -6;\n  yv = 6;\n  dir = 1;\n  // while(ai<0.6 || ai>0.9){\n  //   ai = Math.random().toFixed(2);\n  // }\n}\nfunction update(){\n  bx+=xv;\n  by+=yv;\n  \n  if(p1Up) p1y-=pv;\n  if(p1Down) p1y+=pv;\n  if(p2Up) p2y-=pv;\n  if(p2Down) p2y+=pv;\n  \n  if(p1y<0) p1y = 0;\n  if(p2y<0) p2y = 0;\n  if(p1y>canv.height-ph) p1y = canv.height-ph;\n  if(p2y>canv.height-ph) p2y = canv.height-ph;\n  \n  if(dir == 1 && bx>pt && bx<pt+bd && by>p1y && by<p1y+ph-bd){\n    xv = -xv;\n    dir = 0;\n  }\n  if(dir == 0 && bx < canv.width-pt && bx>canv.width-pt-bd && by>p2y && by<p2y+ph-bd){\n    xv = -xv;\n    dir = 1;\n  }\n    \n  if((by<0 && yv<0) || (by>canv.height-bd && yv>0)){\n    yv = -yv;\n  }\n  if(bx>canv.width){\n    pscore++;\n    reset();\n  }\n  if(bx<0){\n    ascore++;    \n    reset();    \n  }\n  \n  cc.fillStyle = \"black\";\n  cc.fillRect(0,0,canv.width,canv.height);\n  cc.fillStyle = \"yellow\";\n  cc.fillRect(0,p1y,pt,ph);\n  cc.fillRect(canv.width-pt,p2y,pt,ph);\n  cc.fillStyle = \"white\";\n  cc.fillRect(bx-bd/2,by,bd,bd);\n  \n  cc.font = \"15px consolas\";\n  cc.fillStyle = \"yellow\";\n  cc.fillText(\"Player:\"+pscore,50,50);  \n  cc.fillText(\"Computer:\"+ascore,canv.width-130,50);  \n}",
+    "jsMode": "js",
+    "layoutMode": 1,
+    "mainSizes": [
+      51.6105,
+      48.386
+    ],
+    "sizes": [
+      "33px",
+      "33px",
+      "calc(100% - 66px)"
+    ],
+    "title": "two dots",
+    "updatedOn": 1515227876082
+  }
+]
